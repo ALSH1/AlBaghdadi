@@ -1,7 +1,7 @@
 
 # FoX
 
-# <p align="center" style="color:#cb3349" >سورس فوكس اول على تلكرام ⌯︙
+# <p align="center" style="color:#cb3349" >سورس البغدادي اول على تلكرام ⌯︙
 
 # <p align="center" style="color:#cb3349" > شروحات عن السورس ادخل الى قناة السورس
 
