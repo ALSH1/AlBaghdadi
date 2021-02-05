@@ -10,6 +10,7 @@ id_server = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a')
 --------------------------------------------------------------------------------------------------------------
 local AutoSet = function() 
 local create = function(data, file, uglify)  
+  
 file = io.open(file, "w+")   
 local serialized   
 if not uglify then  
