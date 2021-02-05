@@ -145,9 +145,9 @@ print([[
 /**      /**   /**  ** //** 
 /**      //******  **   //**
 //        //////  //     // 
-> CH › @IIIIlI8
-~> DEVELOPER › @QvQvQQ
-~> DEVELOPER › @x_ggx
+> CH › @ALSH_3K
+~> DEVELOPER › @ALSH_BG
+~> DEVELOPER › @ALSH_BG
 ]])
 sudos = dofile("./Info.lua") 
 SUDO = tonumber(sudos.SUDO)
