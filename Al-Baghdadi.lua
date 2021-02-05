@@ -34,7 +34,7 @@ end
 else
 print('\27[0;35m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n لم يتم حفظ التوكن ارسل لي التوكن الان')
 end 
-os.execute('lua Al-Baghdadi.lua')
+os.execute('lua AlBaghdadi.lua')
 end
 if not database:get(id_server..":SUDO:ID") then
 io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n\27[0;33;49m')
@@ -45,7 +45,7 @@ database:set(id_server..":SUDO:ID",SUDOID)
 else
 print('\27[0;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end 
-os.execute('lua Al-Baghdadi.lua')
+os.execute('lua AlBaghdadi.lua')
 end
 if not database:get(id_server..":SUDO:USERNAME") then
 io.write('\27[1;31m ↓ ارسل معرف المطور الاساسي :\n SEND ID FOR SIDO : \27[0;39;49m')
@@ -56,7 +56,7 @@ database:set(id_server..":SUDO:USERNAME",'@'..SUDOUSERNAME)
 else
 print('\n\27[1;34m لم يتم حفظ معرف المطور :')
 end 
-os.execute('lua Al-Baghdadi.lua')
+os.execute('lua AlBaghdadi.lua')
 end
 local create_config_auto = function()
 config = {
@@ -71,10 +71,10 @@ token = database:get(id_server..":token")
 SUDO = database:get(id_server..":SUDO:ID")
 install = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
 print('\n\27[1;34m doneeeeeeee senddddddddddddd :')
-file = io.open("Al-Baghdadi", "w")  
+file = io.open("AlBaghdadi", "w")  
 file:write([[
 #!/usr/bin/env bash
-cd $HOME/Al-Baghdadi
+cd $HOME/AlBaghdadi
 token="]]..database:get(id_server..":token")..[["
 while(true) do
 rm -fr ../.telegram-cli
@@ -94,18 +94,18 @@ echo -e "\033[38;5;208m"
 echo -e "                                                  "
 echo -e "\033[0;00m"
 echo -e "\e[36m"
-./tg -s ./Al-Baghdadi.lua -p PROFILE --bot=$token
+./tg -s ./AlBaghdadi.lua -p PROFILE --bot=$token
 done
 ]])  
 file:close()  
 file = io.open("FX", "w")  
 file:write([[
 #!/usr/bin/env bash
-cd $HOME/Al-Baghdadi
+cd $HOME/AlBaghdadi
 while(true) do
 rm -fr ../.telegram-cli
-screen -S Al-Baghdadi -X kill
-screen -S Al-Baghdadi ./Al-Baghdadi
+screen -S AlBaghdadi -X kill
+screen -S AlBaghdadi ./AlBaghdadi
 done
 ]])  
 file:close() 
@@ -171,13 +171,13 @@ print(serpent.block(value, {comment=false}))
 end 
 sudo_users = {SUDO,961743188,961743188}   
 function SudoBot(msg)  
-local Al-Baghdadi = false  
+local AlBaghdadi = false  
 for k,v in pairs(sudo_users) do  
 if tonumber(msg.sender_user_id_) == tonumber(v) then  
-Al-Baghdadi = true  
+AlBaghdadi = true  
 end  
 end  
-return Al-Baghdadi  
+return AlBaghdadi  
 end 
 function Sudo(msg) 
 local hash = database:sismember(bot_id..'Sudo:User', msg.sender_user_id_) 
@@ -456,35 +456,35 @@ local function sendPhoto(chat_id, reply_to_message_id, disable_notification, fro
 tdcli_function ({ ID = "SendMessage",   chat_id_ = chat_id,   reply_to_message_id_ = reply_to_message_id,   disable_notification_ = disable_notification,   from_background_ = from_background,   reply_markup_ = reply_markup,   input_message_content_ = {   ID = "InputMessagePhoto",   photo_ = getInputFile(photo),   added_sticker_file_ids_ = {},   width_ = 0,   height_ = 0,   caption_ = caption  },   }, dl_cb, nil)  
 end
 function Total_Msg(msgs)  
-local Al-Baghdadi_Msg = ''  
+local AlBaghdadi_Msg = ''  
 if msgs < 100 then 
-Al-Baghdadi_Msg = 'غير متفاعل' 
+AlBaghdadi_Msg = 'غير متفاعل' 
 elseif msgs < 200 then 
-Al-Baghdadi_Msg = 'بده يتحسن' 
+AlBaghdadi_Msg = 'بده يتحسن' 
 elseif msgs < 400 then 
-Al-Baghdadi_Msg = 'شبه متفاعل' 
+AlBaghdadi_Msg = 'شبه متفاعل' 
 elseif msgs < 700 then 
-Al-Baghdadi_Msg = 'متفاعل' 
+AlBaghdadi_Msg = 'متفاعل' 
 elseif msgs < 1200 then 
-Al-Baghdadi_Msg = 'متفاعل قوي' 
+AlBaghdadi_Msg = 'متفاعل قوي' 
 elseif msgs < 2000 then 
-Al-Baghdadi_Msg = 'متفاعل جدا' 
+AlBaghdadi_Msg = 'متفاعل جدا' 
 elseif msgs < 3500 then 
-Al-Baghdadi_Msg = 'اقوى تفاعل'  
+AlBaghdadi_Msg = 'اقوى تفاعل'  
 elseif msgs < 4000 then 
-Al-Baghdadi_Msg = 'متفاعل نار' 
+AlBaghdadi_Msg = 'متفاعل نار' 
 elseif msgs < 4500 then 
-Al-Baghdadi_Msg = 'قمة التفاعل'
+AlBaghdadi_Msg = 'قمة التفاعل'
 elseif msgs < 5500 then 
-Al-Baghdadi_Msg = 'اقوى متفاعل' 
+AlBaghdadi_Msg = 'اقوى متفاعل' 
 elseif msgs < 7000 then 
-Al-Baghdadi_Msg = 'ملك التفاعل' 
+AlBaghdadi_Msg = 'ملك التفاعل' 
 elseif msgs < 9500 then 
-Al-Baghdadi_Msg = 'امبروطور التفاعل' 
+AlBaghdadi_Msg = 'امبروطور التفاعل' 
 elseif msgs < 10000000000 then 
-Al-Baghdadi_Msg = 'رب التفاعل'  
+AlBaghdadi_Msg = 'رب التفاعل'  
 end 
-return Al-Baghdadi_Msg 
+return AlBaghdadi_Msg 
 end
 function Get_Info(msg,chat,user) 
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. chat ..'&user_id='.. user..'')
@@ -538,16 +538,16 @@ function GetFile_Bot(msg)
 local list = database:smembers(bot_id..'Chek:Groups') 
 local t = '{"BOT_ID": '..bot_id..',"GP_BOT":{'  
 for k,v in pairs(list) do   
-NAME = 'Al-Baghdadi Chat'
+NAME = 'AlBaghdadi Chat'
 link = database:get(bot_id.."Private:Group:Link"..msg.chat_id_) or ''
 ASAS = database:smembers(bot_id..'Basic:Constructor'..v)
 MNSH = database:smembers(bot_id..'Constructor'..v)
 MDER = database:smembers(bot_id..'Manager'..v)
 MOD = database:smembers(bot_id..'Mod:User'..v)
 if k == 1 then
-t = t..'"'..v..'":{"Al-Baghdadi":"'..NAME..'",'
+t = t..'"'..v..'":{"AlBaghdadi":"'..NAME..'",'
 else
-t = t..',"'..v..'":{"Al-Baghdadi":"'..NAME..'",'
+t = t..',"'..v..'":{"AlBaghdadi":"'..NAME..'",'
 end
 if #ASAS ~= 0 then 
 t = t..'"ASAS":['
@@ -732,12 +732,12 @@ return false
 end
 end,nil)   
 end  
-function plugin_Al-Baghdadix(msg)
+function plugin_AlBaghdadix(msg)
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
 plugin = dofile("File_Bot/"..v)
-if plugin.Al-Baghdadix and msg then
-pre_msg = plugin.Al-Baghdadix(msg)
+if plugin.AlBaghdadix and msg then
+pre_msg = plugin.AlBaghdadix(msg)
 end
 end
 end
@@ -745,7 +745,7 @@ send(msg.chat_id_, msg.id_,pre_msg)
 end
 
 --------------------------------------------------------------------------------------------------------------
-function SourceAl-Baghdadi(msg,data) -- بداية العمل
+function SourceAlBaghdadi(msg,data) -- بداية العمل
 if msg then
 local text = msg.content_.text_
 --------------------------------------------------------------------------------------------------------------
@@ -836,11 +836,11 @@ else
 if not database:get(bot_id..'Start:Time'..msg.sender_user_id_) then
 local start = database:get(bot_id.."Start:Bot")  
 if start then 
-SourceAl-Baghdadir = start
+SourceAlBaghdadir = start
 else
-SourceAl-Baghdadir = ' ● اهلا عزيزي\n ● انا بوت اسمي ' ..Namebot..'\n ● اختصاصي حمايه الكروبات\n ● من تكرار والسبام والتوجيه والخ…\n ● لتفعيلي اتبع الاخطوات…↓\n ● اضفني الي مجموعتك وقم بترقيتي ادمن واكتب كلمه { تفعيل }  ويستطيع »{ منشئ او المشرفين } بتفعيل فقط\n[ ● معرف المطور ['..UserName..']'
+SourceAlBaghdadir = ' ● اهلا عزيزي\n ● انا بوت اسمي ' ..Namebot..'\n ● اختصاصي حمايه الكروبات\n ● من تكرار والسبام والتوجيه والخ…\n ● لتفعيلي اتبع الاخطوات…↓\n ● اضفني الي مجموعتك وقم بترقيتي ادمن واكتب كلمه { تفعيل }  ويستطيع »{ منشئ او المشرفين } بتفعيل فقط\n[ ● معرف المطور ['..UserName..']'
 end 
-send(msg.chat_id_, msg.id_, SourceAl-Baghdadir) 
+send(msg.chat_id_, msg.id_, SourceAlBaghdadir) 
 end
 end
 database:setex(bot_id..'Start:Time'..msg.sender_user_id_,300,true)
@@ -883,8 +883,8 @@ end
 tdcli_function({ID='GetChat',chat_id_ = id_user},function(arg,dataq)
 tdcli_function ({ ID = "SendChatAction",chat_id_ = id_user, action_ = {  ID = "SendMessageTypingAction", progress_ = 100} },function(arg,ta) 
 if ta.code_ == 400 or ta.code_ == 5 then
-local Al-Baghdadi_Msg = '\n ● قام الشخص بحظر البوت'
-send(msg.chat_id_, msg.id_,Al-Baghdadi_Msg) 
+local AlBaghdadi_Msg = '\n ● قام الشخص بحظر البوت'
+send(msg.chat_id_, msg.id_,AlBaghdadi_Msg) 
 return false  
 end 
 if text then    
@@ -1000,10 +1000,10 @@ echo '*———————————~*\n✺✔{ مـده تـشغيـل ال
 end
 
 if text == 'تحديث السورس •' and SudoBot(msg) then 
-os.execute('rm -rf Al-Baghdadi.lua')
-os.execute('wget https://raw.githubusercontent.com/Source-Al-Baghdadi/Al-Baghdadi/main/Al-Baghdadi.lua')
+os.execute('rm -rf AlBaghdadi.lua')
+os.execute('wget https://raw.githubusercontent.com/Source-AlBaghdadi/AlBaghdadi/main/AlBaghdadi.lua')
 send(msg.chat_id_, msg.id_,' ● تم تحديث السورس \n ● لديك اخر اصدار لسورس فوكس\n ● الاصدار » { 1.3v}')
-dofile('Al-Baghdadi.lua')  
+dofile('AlBaghdadi.lua')  
 end
 if text == 'الاصدار •' and SudoBot(msg) then 
 database:del(bot_id..'Srt:Bot') 
@@ -1190,19 +1190,19 @@ if #group == i then
 if (w + q) == 0 then
 send(msg.chat_id_, msg.id_,'● لا يوجد كروبات وهميه في البوت\n')   
 else
-local Al-Baghdadi = (w + q)
-local sendok = #group - Al-Baghdadi
+local AlBaghdadi = (w + q)
+local sendok = #group - AlBaghdadi
 if q == 0 then
-Al-Baghdadi = ''
+AlBaghdadi = ''
 else
-Al-Baghdadi = '\n● تم ازالة » { '..q..' } كروبات من البوت'
+AlBaghdadi = '\n● تم ازالة » { '..q..' } كروبات من البوت'
 end
 if w == 0 then
-Al-Baghdadik = ''
+AlBaghdadik = ''
 else
-Al-Baghdadik = '\n● تم ازالة » {'..w..'} كروب لان البوت عضو'
+AlBaghdadik = '\n● تم ازالة » {'..w..'} كروب لان البوت عضو'
 end
-send(msg.chat_id_, msg.id_,'●  عدد الكروبات الان » { '..#group..' }'..Al-Baghdadik..''..Al-Baghdadi..'\n●  الان عدد الكروبات الحقيقي » { '..sendok..' } كروبات\n')   
+send(msg.chat_id_, msg.id_,'●  عدد الكروبات الان » { '..#group..' }'..AlBaghdadik..''..AlBaghdadi..'\n●  الان عدد الكروبات الحقيقي » { '..sendok..' } كروبات\n')   
 end
 end
 end,nil)
@@ -1317,10 +1317,10 @@ end
 end
 --------------------------------------------------------------------------------------------------------------
 if text and not Special(msg) then  
-local Al-Baghdadi1_Msg = database:get(bot_id.."Al-Baghdadi1:Add:Filter:Rp2"..text..msg.chat_id_)   
-if Al-Baghdadi1_Msg then 
+local AlBaghdadi1_Msg = database:get(bot_id.."AlBaghdadi1:Add:Filter:Rp2"..text..msg.chat_id_)   
+if AlBaghdadi1_Msg then 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,' ● العضو » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'IIIIlI8')..') \n ● '..Al-Baghdadi1_Msg)
+send(msg.chat_id_, msg.id_,' ● العضو » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'IIIIlI8')..') \n ● '..AlBaghdadi1_Msg)
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
 return false
 end,nil)
@@ -1565,14 +1565,14 @@ return false
 end
 end 
 --------------------------------------------------------------------------------------------------------------
-if Al-Baghdadi_Msg and not Special(msg) then  
-local Al-Baghdadi_Msg = database:get(bot_id.."Add:Filter:Rp2"..text..msg.chat_id_)   
-if Al-Baghdadi_Msg then    
+if AlBaghdadi_Msg and not Special(msg) then  
+local AlBaghdadi_Msg = database:get(bot_id.."Add:Filter:Rp2"..text..msg.chat_id_)   
+if AlBaghdadi_Msg then    
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
-send(msg.chat_id_,0," ● العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n ● ["..Al-Baghdadi_Msg.."] \n")
+send(msg.chat_id_,0," ● العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n ● ["..AlBaghdadi_Msg.."] \n")
 else
-send(msg.chat_id_,0," ● العضو : {["..data.first_name_.."](T.ME/IIIIlI8)}\n ● ["..Al-Baghdadi_Msg.."] \n")
+send(msg.chat_id_,0," ● العضو : {["..data.first_name_.."](T.ME/IIIIlI8)}\n ● ["..AlBaghdadi_Msg.."] \n")
 end
 end,nil)   
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
@@ -2251,10 +2251,10 @@ send(msg.chat_id_, msg.id_,' ● لا تستطيع استخدام البوت \n 
 end
 return false
 end
-os.execute('rm -rf Al-Baghdadi.lua')
-os.execute('wget https://raw.githubusercontent.com/Source-Al-Baghdadi/Al-Baghdadi/main/Al-Baghdadi.lua')
+os.execute('rm -rf AlBaghdadi.lua')
+os.execute('wget https://raw.githubusercontent.com/Source-AlBaghdadi/AlBaghdadi/main/AlBaghdadi.lua')
 send(msg.chat_id_, msg.id_,' ● تم تحديث السورس \n ● لديك اخر اصدار لسورس فوكس\n ● الاصدار » { 1.3v}')
-dofile('Al-Baghdadi.lua')  
+dofile('AlBaghdadi.lua')  
 end
 
 if text and text:match("^تغير الاشتراك$") and SudoBot(msg) then  
@@ -3057,7 +3057,7 @@ send(msg.chat_id_, msg.id_,' ● تم فتح التكرار')
 end
 --------------------------------------------------------------------------------------------------------------
 if text == 'تحديث' and SudoBot(msg) then    
-dofile('Al-Baghdadi.lua')  
+dofile('AlBaghdadi.lua')  
 send(msg.chat_id_, msg.id_, ' ● تم تحديث جميع الملفات') 
 end 
 if text == ("مسح قائمه العام") and SudoBot(msg) then
@@ -7527,42 +7527,42 @@ end
 end
 if text and text == "منع" and msg.reply_to_message_id_ == 0 and Manager(msg)  then       
 send(msg.chat_id_, msg.id_," ● ارسل الكلمه لمنعها")  
-database:set(bot_id.."Al-Baghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"rep")  
+database:set(bot_id.."AlBaghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"rep")  
 return false  
 end    
 if text then   
-local tsssst = database:get(bot_id.."Al-Baghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local tsssst = database:get(bot_id.."AlBaghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if tsssst == "rep" then   
 send(msg.chat_id_, msg.id_," ● ارسل التحذير عند ارسال الكلمه")  
-database:set(bot_id.."Al-Baghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"repp")  
-database:set(bot_id.."Al-Baghdadi1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_, text)  
-database:sadd(bot_id.."Al-Baghdadi1:List:Filter"..msg.chat_id_,text)  
+database:set(bot_id.."AlBaghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"repp")  
+database:set(bot_id.."AlBaghdadi1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_, text)  
+database:sadd(bot_id.."AlBaghdadi1:List:Filter"..msg.chat_id_,text)  
 return false  end  
 end
 if text then  
-local test = database:get(bot_id.."Al-Baghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local test = database:get(bot_id.."AlBaghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if test == "repp" then  
 send(msg.chat_id_, msg.id_," ● تم منع الكلمه مع التحذير")  
-database:del(bot_id.."Al-Baghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
-local test = database:get(bot_id.."Al-Baghdadi1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
+database:del(bot_id.."AlBaghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local test = database:get(bot_id.."AlBaghdadi1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
 if text then   
-database:set(bot_id.."Al-Baghdadi1:Add:Filter:Rp2"..test..msg.chat_id_, text)  
+database:set(bot_id.."AlBaghdadi1:Add:Filter:Rp2"..test..msg.chat_id_, text)  
 end  
-database:del(bot_id.."Al-Baghdadi1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
+database:del(bot_id.."AlBaghdadi1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
 return false  end  
 end
 
 if text == "الغاء منع" and msg.reply_to_message_id_ == 0 and Manager(msg) then    
 send(msg.chat_id_, msg.id_," ● ارسل الكلمه الان")  
-database:set(bot_id.."Al-Baghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"reppp")  
+database:set(bot_id.."AlBaghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"reppp")  
 return false  end
 if text then 
-local test = database:get(bot_id.."Al-Baghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local test = database:get(bot_id.."AlBaghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if test and test == "reppp" then   
 send(msg.chat_id_, msg.id_," ● تم الغاء منعها")  
-database:del(bot_id.."Al-Baghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
-database:del(bot_id.."Al-Baghdadi1:Add:Filter:Rp2"..text..msg.chat_id_)  
-database:srem(bot_id.."Al-Baghdadi1:List:Filter"..msg.chat_id_,text)  
+database:del(bot_id.."AlBaghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+database:del(bot_id.."AlBaghdadi1:Add:Filter:Rp2"..text..msg.chat_id_)  
+database:srem(bot_id.."AlBaghdadi1:List:Filter"..msg.chat_id_,text)  
 return false  end  
 end
 
@@ -7623,21 +7623,21 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 
 if text == "مسح قائمه المنع"and Manager(msg) then   
-local list = database:smembers(bot_id.."Al-Baghdadi1:List:Filter"..msg.chat_id_)  
+local list = database:smembers(bot_id.."AlBaghdadi1:List:Filter"..msg.chat_id_)  
 for k,v in pairs(list) do  
-database:del(bot_id.."Al-Baghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
-database:del(bot_id.."Al-Baghdadi1:Add:Filter:Rp2"..v..msg.chat_id_)  
-database:srem(bot_id.."Al-Baghdadi1:List:Filter"..msg.chat_id_,v)  
+database:del(bot_id.."AlBaghdadi1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+database:del(bot_id.."AlBaghdadi1:Add:Filter:Rp2"..v..msg.chat_id_)  
+database:srem(bot_id.."AlBaghdadi1:List:Filter"..msg.chat_id_,v)  
 end  
 send(msg.chat_id_, msg.id_," ● تم مسح قائمه المنع")  
 end
 
 if text == "قائمه المنع" and Manager(msg) then   
-local list = database:smembers(bot_id.."Al-Baghdadi1:List:Filter"..msg.chat_id_)  
+local list = database:smembers(bot_id.."AlBaghdadi1:List:Filter"..msg.chat_id_)  
 t = "\n ● قائمة المنع \n●○●○●○●○●○●○\n"
 for k,v in pairs(list) do  
-local Al-Baghdadi_Msg = database:get(bot_id.."Al-Baghdadi1:Add:Filter:Rp2"..v..msg.chat_id_)   
-t = t..""..k.."- "..v.." » {"..Al-Baghdadi_Msg.."}\n"    
+local AlBaghdadi_Msg = database:get(bot_id.."AlBaghdadi1:Add:Filter:Rp2"..v..msg.chat_id_)   
+t = t..""..k.."- "..v.." » {"..AlBaghdadi_Msg.."}\n"    
 end  
 if #list == 0 then  
 t = " ● لا يوجد كلمات ممنوعه"  
@@ -8290,7 +8290,7 @@ end
 
 if text == ""..(database:get(bot_id..'Name:Bot') or 'فوكس').."" then  
 Namebot = (database:get(bot_id..'Name:Bot') or 'فوكس')
-local Al-Baghdadi_Msg = {
+local AlBaghdadi_Msg = {
 'عمغي 🥺💕.',
 'هاا شتريد كافي ☹️.',
 'مشايف بوت شني 😂.',
@@ -8298,7 +8298,7 @@ local Al-Baghdadi_Msg = {
 'مشغول حالياً',
 'عمري فداك '..Namebot..' كول حب'
 }
-send(msg.chat_id_, msg.id_,'['..Al-Baghdadi_Msg[math.random(#Al-Baghdadi_Msg)]..']') 
+send(msg.chat_id_, msg.id_,'['..AlBaghdadi_Msg[math.random(#AlBaghdadi_Msg)]..']') 
 return false
 end
 if text=="اذاعه خاص" and msg.reply_to_message_id_ == 0 and Sudo(msg) then 
@@ -8408,10 +8408,10 @@ end
 return false
 end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 200
-},function(ta,Al-Baghdadi)
+},function(ta,AlBaghdadi)
 local t = "\nツ قائمة الاعضاء \n●○●○●○●○●○●○\n"
 x = 0
-local list = Al-Baghdadi.members_
+local list = AlBaghdadi.members_
 for k, v in pairs(list) do
 x = x + 1
 if database:get(bot_id..'user:Name'..v.user_id_) then
@@ -9631,19 +9631,19 @@ if #group == i then
 if (w + q) == 0 then
 send(msg.chat_id_, msg.id_,' ●  لا يوجد كروبات وهميه في البوت\n')   
 else
-local Al-Baghdadi = (w + q)
-local sendok = #group - Al-Baghdadi
+local AlBaghdadi = (w + q)
+local sendok = #group - AlBaghdadi
 if q == 0 then
-Al-Baghdadi = ''
+AlBaghdadi = ''
 else
-Al-Baghdadi = '\n- تم ازالة » { '..q..' } كروبات من البوت'
+AlBaghdadi = '\n- تم ازالة » { '..q..' } كروبات من البوت'
 end
 if w == 0 then
-Al-Baghdadik = ''
+AlBaghdadik = ''
 else
-Al-Baghdadik = '\n- تم ازالة » {'..w..'} كروب لان البوت عضو'
+AlBaghdadik = '\n- تم ازالة » {'..w..'} كروب لان البوت عضو'
 end
-send(msg.chat_id_, msg.id_,' ● عدد الكروبات الان » { '..#group..' }'..Al-Baghdadik..''..Al-Baghdadi..'\n*- الان عدد الكروبات الحقيقي » { '..sendok..' } كروبات\n')   
+send(msg.chat_id_, msg.id_,' ● عدد الكروبات الان » { '..#group..' }'..AlBaghdadik..''..AlBaghdadi..'\n*- الان عدد الكروبات الحقيقي » { '..sendok..' } كروبات\n')   
 end
 end
 end,nil)
@@ -9654,7 +9654,7 @@ end
 if text and text:match("^(gpinfo)$") or text and text:match("^معلومات الكروب$") then
 function gpinfo(arg,data)
 -- vardump(data) 
-Al-Baghdadidx(msg.chat_id_, msg.id_, ' ● ايدي المجموعة » ( '..msg.chat_id_..' )\n ● عدد الادمنيه » ( *'..data.administrator_count_..' )*\n ● عدد المحظورين » ( *'..data.kicked_count_..' )*\n ● عدد الاعضاء » ( *'..data.member_count_..' )*\n', 'md') 
+AlBaghdadidx(msg.chat_id_, msg.id_, ' ● ايدي المجموعة » ( '..msg.chat_id_..' )\n ● عدد الادمنيه » ( *'..data.administrator_count_..' )*\n ● عدد المحظورين » ( *'..data.kicked_count_..' )*\n ● عدد الاعضاء » ( *'..data.member_count_..' )*\n', 'md') 
 end 
 getChannelFull(msg.chat_id_, gpinfo, nil) 
 end
@@ -10433,7 +10433,7 @@ Text = [[
 ● اذاعه 
 ● ردود المطور 
     ●○●○●○●○●○●○ 
-[Al-Baghdadi 𝘊𝘩𝘢𝘯𝘯𝘦𝘭](t.me/IIIIlI8)
+[AlBaghdadi 𝘊𝘩𝘢𝘯𝘯𝘦𝘭](t.me/IIIIlI8)
 ]]
 send(msg.chat_id_, msg.id_,(help_text or Text)) 
 return false
@@ -11630,8 +11630,8 @@ local Bots = database:get(bot_id.."lock:Bot:kick"..msg.chat_id_)
 for i=0,#mem_id do  
 if msg.content_.members_[i].type_.ID == "UserTypeBot" and not Mod(msg) and Bots == "kick" then   
 https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..msg.sender_user_id_)
-Al-Baghdadi = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
-local Json_Info = JSON.decode(Al-Baghdadi)
+AlBaghdadi = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
+local Json_Info = JSON.decode(AlBaghdadi)
 if Json_Info.ok == true and #mem_id == i then
 local Msgs = {}
 Msgs[0] = msg.id_
@@ -11652,8 +11652,8 @@ local mem_id = msg.content_.members_
 local Bots = database:get(bot_id.."lock:Bot:kick"..msg.chat_id_) 
 for i=0,#mem_id do  
 if msg.content_.members_[i].type_.ID == "UserTypeBot" and not Mod(msg) and Bots == "del" then   
-Al-Baghdadi = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
-local Json_Info = JSON.decode(Al-Baghdadi)
+AlBaghdadi = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
+local Json_Info = JSON.decode(AlBaghdadi)
 if Json_Info.ok == true and #mem_id == i then
 local Msgs = {}
 Msgs[0] = msg.id_
@@ -11686,8 +11686,8 @@ return false
 end    
 end   
 --------------------------------------------------------------------------------------------------------------
-SourceAl-Baghdadi(data.message_,data)
-plugin_Al-Baghdadix(data.message_)
+SourceAlBaghdadi(data.message_,data)
+plugin_AlBaghdadix(data.message_)
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
@@ -11794,13 +11794,13 @@ return false
 end  
 end 
 ------------------------------------------------------------------------
-local Al-BaghdadiAbot = database:get(bot_id.."Al-Baghdadi1:Add:Filter:Rp2"..text..result.chat_id_)   
-if Al-BaghdadiAbot then    
+local AlBaghdadiAbot = database:get(bot_id.."AlBaghdadi1:Add:Filter:Rp2"..text..result.chat_id_)   
+if AlBaghdadiAbot then    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
-send(msg.chat_id_,0," ● العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n ● ["..Al-BaghdadiAbot.."] \n") 
+send(msg.chat_id_,0," ● العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n ● ["..AlBaghdadiAbot.."] \n") 
 else
-send(msg.chat_id_,0," ● العضو : {["..data.first_name_.."](T.ME/IIIIlI8)}\n ● ["..Al-BaghdadiAbot.."] \n") 
+send(msg.chat_id_,0," ● العضو : {["..data.first_name_.."](T.ME/IIIIlI8)}\n ● ["..AlBaghdadiAbot.."] \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = data.message_id_}) 
@@ -11821,9 +11821,9 @@ end
 end
 ------------------------------------------------------------------------
 if text then
-local Al-Baghdadi1_Msg = database:get(bot_id.."Al-Baghdadi1:Add:Filter:Rp2"..text..result.chat_id_)   
-if Al-Baghdadi1_Msg then    
-send(msg.chat_id_, msg.id_," ● "..Al-Baghdadi1_Msg)
+local AlBaghdadi1_Msg = database:get(bot_id.."AlBaghdadi1:Add:Filter:Rp2"..text..result.chat_id_)   
+if AlBaghdadi1_Msg then    
+send(msg.chat_id_, msg.id_," ● "..AlBaghdadi1_Msg)
 DeleteMessage(result.chat_id_, {[0] = data.message_id_})     
 return false
 end
