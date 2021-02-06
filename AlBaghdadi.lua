@@ -101,7 +101,7 @@ echo -e "\e[36m"
 done
 ]])  
 file:close()  
-file = io.open("BG", "w")  
+file = io.open("BGG", "w")  
 file:write([[
 #!/usr/bin/env bash
 cd $HOME/AlBaghdadi
