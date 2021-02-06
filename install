@@ -21,8 +21,8 @@ sudo apt-get install libnotify-dev -y
 sudo chmod +x tg
 lua AlBaghdadi.lua
 sudo chmod +x AlBaghdadi
-sudo chmod +x ./BG
-./BG
+sudo chmod +x ./BGG
+./BGG
 }
 if [ "$1" = "install" ]; then
 install
@@ -34,6 +34,6 @@ fi
 sudo chmod +x tg
 lua AlBaghdadi.lua
 sudo chmod +x AlBaghdadi
-sudo chmod +x ./BG
+sudo chmod +x ./BGG
 ./BG
 fi
