@@ -139,6 +139,7 @@ return config
 end 
 _redis = load_redis()  
 --------------------------------------------------------------------------------------------------------------
+[[--
 print([[
 BG_________BG________BG_________BG
 
@@ -155,6 +156,7 @@ BG_________BG________BG_________BG
 ~> DEVELOPER › @ALSH_BG
 ~> DEVELOPER › @ALSH_BG
 ]])
+--]]
 sudos = dofile("./Info.lua") 
 SUDO = tonumber(sudos.SUDO)
 sudo_users = {SUDO}
