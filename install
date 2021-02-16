@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 cd $HOME/AlBaghdadi
 install() {
+
 rm -rf $HOME/.telegram-cli
 sudo apt-get update -y
 sudo apt-get upgrade -y
