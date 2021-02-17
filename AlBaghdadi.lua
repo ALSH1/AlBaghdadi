@@ -1014,7 +1014,7 @@ send(msg.chat_id_, msg.id_,' • اصدار سورس البغدادي \n • ا�
 end
 if text == 'قناه تحديثات البوت •' and SudoBot(msg) then 
 database:del(bot_id..'Srt:Bot') 
-send(msg.chat_id_, msg.id_,' • [تحديثات البوت](t.me/SourceAlBaghdadi) \n • [قناه السورس](t.me/SourceAlBaghdadi)')
+send(msg.chat_id_, msg.id_,' • [تحديثات البوت](t.me/AlBaghdadiUp) \n • [قناه السورس](t.me/SourceAlBaghdadi)')
 end
 if text == '•معلومات الكيبورد•' and SudoBot(msg) then 
 database:del(bot_id..'Sart:Bot') 
