@@ -2707,7 +2707,7 @@ end
 end 
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then
 Text = [[
-••[ˢᵒᵘʳᶜᵉＡＬ-ＢＡＧＨＤＡＤＩ ♕︎](t.me/SourceAlBaghdadi)••
+•[ˢᵒᵘʳᶜᵉＡＬ-ＢＡＧＨＤＡＤＩ ♕︎](t.me/SourceAlBaghdadi)•
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
