@@ -4057,7 +4057,7 @@ end
 database:srem(bot_id..'Sudo:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '*\n•> العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') '
+usertext = '*\n☆︙ العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') '
 status  = '*\n تم تنزيله من المطورين*'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -6632,7 +6632,7 @@ database:sadd(bot_id..'Ban:User'..msg.chat_id_, userid)
 chat_kick(msg.chat_id_, userid)  
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '*\n•> العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
+usertext = '*\n☆︙ العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
 status  = '*\n تم حظره من المجموعه*'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -6848,7 +6848,7 @@ if Can_or_NotCan(result.sender_user_id_, msg.chat_id_) then
 send(msg.chat_id_, msg.id_, "\n*• عذرا لا تستطيع طرد او حظر او كتم او تقيد *( "..Rutba(result.sender_user_id_,msg.chat_id_).." )")
 else
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '*\n•> العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
+usertext = '*\n☆︙ العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
 status  = '*\n تم كتم لمدة ~ *{ '..TextEnd[2]..' '..TextEnd[3]..'}'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -6922,7 +6922,7 @@ end
 database:sadd(bot_id..'Muted:User'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '*\n•> العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
+usertext = '*\n☆︙ العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
 status  = '*\n تم كتمه من هنا*'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -6946,8 +6946,8 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'Muted:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '*\n•> العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
-status  = '*\n•> الايدي > *'..result.sender_user_id_..' *~\n تم الغاء الكتم من هنا*'
+usertext = '*\n☆︙ العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
+status  = '*\n☆︙ الايدي > *'..result.sender_user_id_..' *~\n تم الغاء الكتم من هنا*'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -6994,7 +6994,7 @@ end
 database:srem(bot_id..'Muted:User'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '*\n•> العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
+usertext = '*\n☆︙ العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
 status  = '*\n تم الغاء الكتم من هنا*'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -7017,8 +7017,8 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'Muted:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '*\n•> العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
-status  = '*\n•> الايدي > *'..result.sender_user_id_..'* ~\n تم الغاء الكتم من هنا*'
+usertext = '*\n☆︙ العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
+status  = '*\n☆︙ الايدي > *'..result.sender_user_id_..'* ~\n تم الغاء الكتم من هنا*'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -7065,7 +7065,7 @@ end
 database:srem(bot_id..'Muted:User'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '*\n•> العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
+usertext = '*\n☆︙ العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
 status  = '*\n تم الغاء الكتم من هنا*'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -7168,7 +7168,7 @@ if Can_or_NotCan(result.sender_user_id_, msg.chat_id_) then
 send(msg.chat_id_, msg.id_, "*\n• عذرا لا تستطيع طرد او حظر او كتم او تقيد *( "..Rutba(result.sender_user_id_,msg.chat_id_).." )")
 else
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '*\n•> العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
+usertext = '*\n☆︙ العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
 status  = '*\n• تم تقيده لمدة ~ *{ '..TextEnd[2]..' '..TextEnd[3]..'}'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -7422,16 +7422,16 @@ database:srem(bot_id..'GBan:User',result.sender_user_id_)
 database:srem(bot_id..'Ban:User'..msg.chat_id_,result.sender_user_id_)
 database:srem(bot_id..'Muted:User'..msg.chat_id_,result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '*\n•> العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
-status  = '*\n•> الايدي > *'..result.sender_user_id_..' *~\n تم الغاء القيود عنه*'
+usertext = '*\n☆︙ العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
+status  = '*\n☆︙ الايدي > *'..result.sender_user_id_..' *~\n تم الغاء القيود عنه*'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 else
 database:srem(bot_id..'Ban:User'..msg.chat_id_,result.sender_user_id_)
 database:srem(bot_id..'Muted:User'..msg.chat_id_,result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '*\n•> العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
-status  = '*\n•> الايدي > *'..result.sender_user_id_..' *~\n تم الغاء القيود عنه*'
+usertext = '*\n☆︙ العضو > *['..data.first_name_..'](t.me/'..(data.username_ or 'SourceAlBaghdadi')..') ~'
+status  = '*\n☆︙ الايدي > *'..result.sender_user_id_..' *~\n تم الغاء القيود عنه*'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
