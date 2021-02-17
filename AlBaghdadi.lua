@@ -2274,7 +2274,7 @@ end
 return false
 end
 os.execute('rm -rf AlBaghdadi.lua')
-os.execute('wgethttps://raw.githubusercontent.com/ALSH1/AlBaghdadi/main/AlBaghdadi.lua')
+os.execute('wget https://raw.githubusercontent.com/ALSH1/AlBaghdadi/main/AlBaghdadi.lua')
 send(msg.chat_id_, msg.id_,' • تم تحديث السورس \n • لديك اخر اصدار لسورس البغدادي\n • الاصدار » { 1.3v}')
 dofile('AlBaghdadi.lua')  
 end
